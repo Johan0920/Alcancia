@@ -25,6 +25,7 @@ public class MonedaController {
         return monedaService.obtenerMonedas();
     }
 
+    
     @PostMapping("/ingresarmoneda")
     public String ingresarMoneda(@RequestBody MonedaModel moneda) {
         String mensajeOk = "Moneda ingresada a la alcancía de forma correcta";
