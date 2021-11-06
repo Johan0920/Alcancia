@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@RequestMapping("/cantidad")
+// @RequestMapping("/cantidad")
 public class MonedaController {
     @Autowired
     MonedaService monedaService;
@@ -25,12 +25,11 @@ public class MonedaController {
         return monedaService.obtenerMonedas();
     }
 
-    
     @PostMapping("/ingresarmoneda")
     public String ingresarMoneda(@RequestBody MonedaModel moneda) {
         String mensajeOk = "Moneda ingresada a la alcancía de forma correcta";
         String mensajeErr = "Las monedas deben ser de 50, 100, 200, 500 o 1.000";
-        if (moneda.getTipo() != Integer.toString(moneda.getValor())){
+        if (moneda.getValor() != Integer.parseInt(moneda.getTipo())) {
             return "el valor de la moneda no corresponde al tipo";
         }
         switch (moneda.getTipo()) {
@@ -60,7 +59,7 @@ public class MonedaController {
         return monedaService.CantidadMonedas();
     }
 
-    @GetMapping(path =  "/cantidad/{tipo}")
+    @GetMapping(path = "/cantidad/{tipo}")
     public long CantidadMonedasByTipo(@PathVariable("tipo") String tipo) {
         return monedaService.CantidadMonedasByTipo(tipo);
     }
@@ -70,7 +69,7 @@ public class MonedaController {
         return monedaService.DineroMonedas();
     }
 
-    @GetMapping(path =  "/dinero/{tipo}")
+    @GetMapping(path = "/dinero/{tipo}")
     public long DineroMonedasByTipo(@PathVariable("tipo") String tipo) {
         return monedaService.DineroMonedasByTipo(tipo);
     }
