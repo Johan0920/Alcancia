@@ -1,7 +1,5 @@
 package com.alcancia.alcancia.controllers;
 
-import java.util.ArrayList;
-
 import com.alcancia.alcancia.models.MonedaModel;
 import com.alcancia.alcancia.services.MonedaService;
 
@@ -18,10 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 // @RequestMapping("/cantidad")
 public class MonedaController {
     @Autowired
-    MonedaService monedaService;
+    MonedaService monedaService=new MonedaService();
+
 
     @GetMapping("/listarmonedas")
-    public ArrayList<MonedaModel> obtenerMonedas() {
+    public Iterable<MonedaModel> obtenerMonedas() {
         return monedaService.obtenerMonedas();
     }
 

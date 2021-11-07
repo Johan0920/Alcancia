@@ -14,6 +14,7 @@ public class MonedaModel {
     private Integer valor;
     private String tipo;
 
+
     public void setId(Integer id){
         this.id=id;
     }

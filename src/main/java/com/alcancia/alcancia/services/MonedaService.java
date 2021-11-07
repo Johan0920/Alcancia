@@ -13,8 +13,9 @@ public class MonedaService {
     @Autowired
     MonedaRepository monedaRepository;
 
-    public ArrayList<MonedaModel> obtenerMonedas() {
-        return (ArrayList<MonedaModel>) monedaRepository.findAll();
+
+    public Iterable<MonedaModel> obtenerMonedas() {
+        return (Iterable<MonedaModel>) monedaRepository.findAll();
     }
 
     public boolean ingresarMoneda(MonedaModel moneda) {
