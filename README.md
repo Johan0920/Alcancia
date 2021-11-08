@@ -27,5 +27,7 @@ Este proyecto es una prueba, se muestra los siguientes pasos:
 	https://apinetalcancia.azurewebsites.net/ esta es la url en Azure
 
 Resumen:
-Nube local --> localhost:8080/swagger-ui.html
+
+Nube local --> http://localhost:8080/swagger-ui.html
+
 Nube de azure --> https://apinetalcancia.azurewebsites.net/
