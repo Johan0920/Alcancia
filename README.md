@@ -30,4 +30,4 @@ Resumen:
 
 Nube local --> http://localhost:8080/swagger-ui.html
 
-Nube de azure --> https://apinetalcancia.azurewebsites.net/
+Nube de azure --> https://apialcancia.azurewebsites.net/
