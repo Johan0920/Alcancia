@@ -2,8 +2,6 @@ package com.alcancia.alcancia.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -13,7 +11,6 @@ import java.util.List;
 import com.alcancia.alcancia.models.MonedaModel;
 import com.alcancia.alcancia.repositories.MonedaRepository;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -31,7 +28,6 @@ public class MonedaServiceTest {
     private MonedaModel monedaModel = new MonedaModel();
     private MonedaModel monedaModel1 = new MonedaModel();
     private MonedaModel monedaModel2 = new MonedaModel();
-    private MonedaModel monedaModel3 = new MonedaModel();
     private List<MonedaModel> lista;
 
     @BeforeEach
@@ -99,7 +95,6 @@ public class MonedaServiceTest {
         ArrayList<MonedaModel> listaNueva = new ArrayList<MonedaModel>();
         for (MonedaModel m : lista) {
             String tipoMock = m.getTipo();
-            Integer id = m.getId();
             if (tipoMock == tipo) {
                 dinero = dinero + m.getValor();
                 listaNueva.add(m);
